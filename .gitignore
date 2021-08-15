@@ -105,3 +105,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 @blainelewis1
+
+# target dirs
+target/maven-status/
+target/maven-archiver/
