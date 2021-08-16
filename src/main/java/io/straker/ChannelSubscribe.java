@@ -10,10 +10,13 @@ import static java.lang.System.out;
 
 public class ChannelSubscribe{
 
+    private static final String JEDIS_HOST = "localhost";
+    private static final int JEDIS_PORT = 6379;
+
     public static void main(String[] args) {
         Jedis jedis = null;
         try{
-            jedis = new Jedis();
+            jedis = new Jedis(JEDIS_HOST, JEDIS_PORT);
 
             JedisPubSub jedisPubSub = new JedisPubSub() {
                 @Override

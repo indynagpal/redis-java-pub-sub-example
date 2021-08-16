@@ -8,11 +8,15 @@ import redis.clients.jedis.Jedis;
 import static java.lang.System.out;
 
 public class ChannelPublish{
+
+    private static final String JEDIS_HOST = "localhost";
+    private static final int JEDIS_PORT = 6379;
+
     public static void main(String[] args) {
         Jedis jedis = null;
 
         try{
-            jedis = new Jedis();
+            jedis = new Jedis(JEDIS_HOST, JEDIS_PORT);
 
             sendMessage(jedis, "C1", "First message to channel");
             sendMessage(jedis, "C2", "First message to channel");
